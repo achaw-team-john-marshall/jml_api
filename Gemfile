@@ -12,6 +12,8 @@ gem 'pg'
 
 gem 'rspec-rails', :group => :test
 
+gem 'seed_dump'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

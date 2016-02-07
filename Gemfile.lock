@@ -103,6 +103,9 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    seed_dump (3.2.2)
+      activerecord (~> 4)
+      activesupport (~> 4)
     spring (1.6.3)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -124,6 +127,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   rails-api
   rspec-rails
+  seed_dump
   spring
 
 BUNDLED WITH
