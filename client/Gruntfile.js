@@ -84,13 +84,30 @@ module.exports = function (grunt) {
       ],
       livereload: {
         options: {
+          open: true,
+          base: [
+            '.tmp',
+            '<%= yeoman.app %>'
+          ],
           middleware: function (connect, options) {
             if (!Array.isArray(options.base)) {
               options.base = [options.base];
             }
 
-            // Setup the proxy
-            var middlewares = [require('grunt-connect-proxy/lib/utils').proxyRequest];
+            // setup the proxy
+            var middlewares = [
+              connect.static('.tmp'),
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect().use(
+                '/app/styles',
+                connect.static('./app/styles')
+              ),
+              connect.static(appConfig.app),
+              require('grunt-connect-proxy/lib/utils').proxyRequest
+            ];
 
             // Serve static files.
             options.base.forEach(function(base) {
@@ -470,6 +487,8 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-connect-proxy');
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -526,5 +545,4 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.loadNpmTasks('grunt-connect-proxy');
 };
