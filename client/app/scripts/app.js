@@ -8,15 +8,16 @@
  *
  * Main module of the application.
  */
-var app = angular.module('jmlApiApp', [
+angular
+  .module('jmlApiApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ]);
-  app.config(function ($routeProvider) {
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -28,18 +29,7 @@ var app = angular.module('jmlApiApp', [
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/questions', {
-        templateUrl: 'views/questions.html',
-        controller: 'QuestionsCtrl',
-        controllerAs: 'questions'
-      })
       .otherwise({
         redirectTo: '/'
       });
   });
-  app.factory('Question', ['$resource', function($resource) {
-    return $resource('/api/questions/:id.json', null, {
-      'update': {method: 'PUT' }
-    });
-  }]);
-
