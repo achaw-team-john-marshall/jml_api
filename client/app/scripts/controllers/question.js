@@ -8,7 +8,7 @@
  * Controller of the jmlApiApp
  */
 angular.module('jmlApiApp')
-  .controller('QuestionCtrl', ['$scope', 'question', function ($scope, question) {
+  .controller('QuestionCtrl', ['$scope', 'question', function($scope, question) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
