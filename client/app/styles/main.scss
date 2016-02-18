@@ -19,16 +19,26 @@ body {
 
 /* new layout */
 
-.mission {
+.ibox {
   padding: 1em;
+  margin-bottom: 1em;
   background: #ffffff;
   border-radius: 0.25em;
   border-top: 3px solid #d7e4ed;
 }
 
-.mission h3 {
+.ibox h3 {
   padding-bottom: .5em;
-  border-bottom: 1px solid #000;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #d7e4ed;
+  margin-top: 0px;
+}
+
+.ibox p {
+  padding: 10px;
+  margin-bottom: 0px;
+  text-align: justify;
 }
 
 .question-container::before {
