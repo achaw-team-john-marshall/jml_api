@@ -1,7 +1,67 @@
-<div class="jumbotron">
-  <h1>Welcome</h1>
-  <p class="lead">
-    We have resources to help you.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Want to Learn More? </a></p>
+<div class="col-lg-12">
+
+  <div class="col-lg-4">
+    <div class="ibox">
+      <p><a class="btn btn-block btn-lg btn-success" ng-href="#/">Quick Close</a></p>
+    </div>
+    <div class="ibox">
+      <h3>Our Mission</h3>
+      <p>We assist survivors of domestic violence engaged in the brave and perilous journey of becoming safe and whole again through legal assistance in eight practice areas, the development of educational and training programs and materials that better enable survivors to exercise their rights, and crafting empirical-based proposals to improve the legal system’s response to this pervasive and complex problem.</p>
+    </div>
+  </div>
+
+<div class="col-lg-8">
+  <div class="question-container">
+
+    <div class="quest-pic">
+      <span class="fa-stack fa-2x">
+        <i class="fa fa-circle fa-stack-2x circ-bg"></i>
+          <strong class="fa-stack-1x text-primary num">1</strong>
+        </span>
+    </div>
+
+    <h2>Tax Relief Qualification</h2>
+    <div class="well question">
+      <div ng-repeat="question in questions track by $index">
+        <div ng-if="question.quesVisible">{{ question.quesBody }}
+        <div>
+          <br>
+        </div>
+          <div align="right">
+            <button class="btn btn-success" ng-click="answerYes($index)"><i class="fa fa-check"></i></button>
+            <button class="btn btn-danger" ng-click="answerNo($index)"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+      </div>
+      <div ng-if="questions.length === 0">
+        <h4>You likely qualify for Innocent Spouse Relief.</h4>
+        <p>See <a href="https://www.irs.gov/pub/irs-pdf/f8857.pdf" target="_blank">Form 8857</a>, Request for Innocent Spouse Relief.  Find instructions for this form<a href="https://www.irs.gov/pub/irs-pdf/i8857.pdf" target="_blank"> here</a>.</p>
+        <p>Check back in the near future for an Interactive Form 8857 which the John Marshall Domestic Violence Clinic is currently working on. This interactive format will aid users in filling out the form.</p>
+        <p>Also, please visit the following organizations who are dedicated to helping those who are victims of domestic violence:</p>
+        <ul>
+          <li>
+            <a href="http://www.betweenfriendschicago.org/aboutus.html" target="_blank">Between Friends</a>
+          </li>
+          <li>
+            <a href="http://www.chicagocac.org/who-we-are/contact-us/" target="_blank">Chicago Children's Advocacy Center</a>
+          </li>
+          <li>
+            <a href="http://www.familyrescueinc.org/" target="_blank">Family Resuce</a>
+          </li>
+          <li>
+            24-Hour Crisis Line: (800) 360-6619
+          </li>
+        </ul>
+      </div>
+      <div ng-if="faqs[0].faqVisible">
+        <h2>Frequently Asked Questions</h2>
+        <div><br></div>
+        <div class="well" style="background-color:white;" ng-repeat="faq in faqs track by $index" ng-click="faqToggleVisible($index)">
+          <p>{{ faq.question }}</p>
+          <p class="well" ng-if="faq.answerVisible">{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
