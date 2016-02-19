@@ -93,6 +93,11 @@ angular.module('jmlApiApp')
       $scope.faqs[inputIndex].answerVisible = !$scope.faqs[inputIndex].answerVisible;
     };
 
+    $scope.getAway = function() {
+      window.open('http://weather.com', '_newtab');
+      window.location.replace('http://google.com');
+    };
+
     window.$scope = $scope;
 
   }]);
