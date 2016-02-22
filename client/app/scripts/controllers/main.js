@@ -98,6 +98,10 @@ angular.module('jmlApiApp')
       window.location.replace('http://google.com');
     };
 
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+
     window.$scope = $scope;
 
   }]);
