@@ -99,7 +99,7 @@ angular.module('jmlApiApp')
     };
 
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="tooltip"]').tooltip();
     });
 
     window.$scope = $scope;
