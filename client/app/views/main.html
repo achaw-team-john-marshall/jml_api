@@ -14,17 +14,17 @@
 <div class="col-lg-8">
   <div class="question-container">
 
-    <div class="quest-pic">
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-circle fa-stack-2x circ-bg"></i>
-          <strong class="fa-stack-1x text-primary num">1</strong>
-        </span>
-    </div>
 
     <h2>Tax Relief Qualification</h2>
     <div class="well question">
       <div ng-repeat="question in questions track by $index">
         <div ng-if="question.quesVisible">{{ question.quesBody }}
+          <div class="quest-pic">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x circ-bg"></i>
+              <strong class="fa-stack-1x text-primary num">{{ question.position }}</strong>
+            </span>
+          </div>
         <div>
           <br>
         </div>
