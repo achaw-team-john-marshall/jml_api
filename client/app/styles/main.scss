@@ -66,9 +66,10 @@ body {
 
 .quest-pic {
   display: inline-block;
-  padding-top: 4em;
+  padding-top: 0;
   position: absolute;
-  left: .9em;
+  left: -4.5em;
+  top: 0em;
 }
 
 .circ-bg {
