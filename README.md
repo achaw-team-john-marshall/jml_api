@@ -1,28 +1,33 @@
-== README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Things we want to cover:
 
-Things you may want to cover:
+- [ ] Ruby version
 
-* Ruby version
+- [ ] System dependencies
 
-* System dependencies
+- [ ] Configuration
 
-* Configuration
+- [ ] Database creation
 
-* Database creation
+- [ ] Database initialization
 
-* Database initialization
+- [ ] How to run the test suite
 
-* How to run the test suite
+- [ ] Services (job queues, cache servers, search engines, etc.)
 
-* Services (job queues, cache servers, search engines, etc.)
+- [ ] Deployment instructions
 
-* Deployment instructions
+## Introduction
 
-* ...
+This application was built as two conceptually seperate components
+- A [rails-api](https://github.com/rails-api/rails-api) backend
+- A [yeoman-angular](https://github.com/yeoman/generator-angular) based frontend
 
+This application is based heavily off the tutorial [How to Wire up Ruby on Rails and AngularJS as a Single-Page Application](http://www.angularonrails.com/ruby-on-rails-angularjs-single-page-application/). From here on it will be assumed that you have read and fully understood this article. 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Notable points of deviation from this article include
+- `yo angular:factory <some_factory>` to generate the our resource factories
+- Exclude puma from development environment or gurnt-proxy pass will not work
+
+*guys lets fill in all the gotchas here*
