@@ -34,16 +34,13 @@ angular.module('jmlApiApp')
       window.location.replace('/#/question');
     };
 
-
-    console.log(unorderedChoices);
-
     $scope.getAway = function() {
       window.open('http://weather.com', '_newtab');
       window.location.replace('http://google.com');
     };
 
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
+    angular.element(function () {
+      angular.element('[data-toggle="tooltip"]').tooltip();
     });
 
   }]);
