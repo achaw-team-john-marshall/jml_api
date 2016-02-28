@@ -30,12 +30,8 @@ angular.module('jmlApiApp')
       console.log($scope.choices.length);
     };
 
-    $scope.answerNo = function(inputIndex) {
-      $scope.choices[inputIndex].visible = false;
-      console.log($scope.choices[inputIndex].body);
-      // $scope.faqs[0].faqVisible = !$scope.faqs[0].faqVisible;
-      // $scope.faqs[1].faqVisible = !$scope.faqs[1].faqVisible;
-      // console.log($scope.faqs[0].faqVisible);
+    $scope.answerNo = function() {
+      window.location.replace('/#/question');
     };
 
 
