@@ -14,7 +14,12 @@ angular.module('jmlApiApp')
       'AngularJS',
       'Karma'
     ];
+
     $scope.questions = question.query();
+
+    $scope.answerToggleVisible = function(inputIndex) {
+      $scope.questions[inputIndex].answerVisible = !$scope.questions[inputIndex].answerVisible;
+    };
 
     $scope.getAway = function() {
       window.open('http://weather.com', '_newtab');
