@@ -25,7 +25,7 @@
     <h2>Tax Relief Qualification</h2>
     <div class="well question">
       <div ng-repeat="choice in choices track by $index">
-        <div ng-if="question.quesVisible">{{ choice.body }}
+        <div ng-if="choice.visible">{{ choice.body }}
           <div class="quest-pic">
             <span class="fa-stack fa-2x">
               <i class="fa fa-circle fa-stack-2x circ-bg"></i>

@@ -14,16 +14,29 @@ angular.module('jmlApiApp')
       'AngularJS',
       'Karma'
     ];
-    
+
     $scope.choices = [];
     var unorderedChoices = questionnaireChoices.query(function() {
       for (var i = 0; i < unorderedChoices.length; i++) {
         $scope.choices[unorderedChoices[i].position - 1] = unorderedChoices[i];
         console.log($scope.choices);
-      };
+      }
     });
 
+    $scope.answerYes = function() {
+      $scope.choices.shift();
+      console.log($scope.choices[0].body);
+      $scope.choices[0].visible = true;
+      console.log($scope.choices.length);
+    };
 
+    $scope.answerNo = function(inputIndex) {
+      $scope.choices[inputIndex].visible = false;
+      console.log($scope.choices[inputIndex].body);
+      // $scope.faqs[0].faqVisible = !$scope.faqs[0].faqVisible;
+      // $scope.faqs[1].faqVisible = !$scope.faqs[1].faqVisible;
+      // console.log($scope.faqs[0].faqVisible);
+    };
 
 
     console.log(unorderedChoices);
