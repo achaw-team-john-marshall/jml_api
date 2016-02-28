@@ -2,19 +2,20 @@
 
 /**
  * @ngdoc function
- * @name jmlApiApp.controller:QuestionCtrl
+ * @name jmlApiApp.controller:QuestionnairechoicesCtrl
  * @description
- * # QuestionCtrl
+ * # QuestionnairechoicesCtrl
  * Controller of the jmlApiApp
  */
 angular.module('jmlApiApp')
-  .controller('QuestionCtrl', ['$scope', 'question', function($scope, question) {
+  .controller('QuestionnairechoicesCtrl', [ '$scope', 'questionnaireChoices', function ($scope, questionnaireChoices) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    $scope.questions = question.query();
+
+    $scope.choices = questionnaireChoices.query();
 
     $scope.getAway = function() {
       window.open('http://weather.com', '_newtab');
