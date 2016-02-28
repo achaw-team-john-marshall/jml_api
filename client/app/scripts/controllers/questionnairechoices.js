@@ -8,12 +8,14 @@
  * Controller of the jmlApiApp
  */
 angular.module('jmlApiApp')
-  .controller('QuestionnairechoicesCtrl', function ($scope) {
+  .controller('QuestionnairechoicesCtrl', [ '$scope', 'questionnaireChoices', function ($scope, questionnaireChoices) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.choices = questionnaireChoices.query();
 
     $scope.getAway = function() {
       window.open('http://weather.com', '_newtab');
@@ -24,4 +26,4 @@ angular.module('jmlApiApp')
       $('[data-toggle="tooltip"]').tooltip();
     });
 
-  });
+  }]);
