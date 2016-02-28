@@ -21,8 +21,8 @@ angular.module('jmlApiApp')
       window.location.replace('http://google.com');
     };
 
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
+    angular.element(function () {
+      angular.element('[data-toggle="tooltip"]').tooltip();
     });
 
   }]);
