@@ -15,4 +15,14 @@ angular.module('jmlApiApp')
       'Karma'
     ];
     $scope.questions = question.query();
+
+    $scope.getAway = function() {
+      window.open('http://weather.com', '_newtab');
+      window.location.replace('http://google.com');
+    };
+
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+
   }]);
