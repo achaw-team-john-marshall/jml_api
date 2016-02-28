@@ -13,4 +13,5 @@ angular.module('jmlApiApp')
    return $resource('/api/questions/:id.json', null, {
     'update': { method:'PUT' }
   });
-  }]);
+  $resource.answerVisible = false;
+}]);

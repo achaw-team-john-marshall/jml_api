@@ -34,11 +34,6 @@ angular.module('jmlApiApp')
       window.location.replace('/#/question');
     };
 
-    $scope.getAway = function() {
-      window.open('http://weather.com', '_newtab');
-      window.location.replace('http://google.com');
-    };
-
     angular.element(function () {
       angular.element('[data-toggle="tooltip"]').tooltip();
     });
