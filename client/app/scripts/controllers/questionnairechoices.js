@@ -14,8 +14,19 @@ angular.module('jmlApiApp')
       'AngularJS',
       'Karma'
     ];
+    
+    $scope.choices = [];
+    var unorderedChoices = questionnaireChoices.query(function() {
+      for (var i = 0; i < unorderedChoices.length; i++) {
+        $scope.choices[unorderedChoices[i].position - 1] = unorderedChoices[i];
+        console.log($scope.choices);
+      };
+    });
 
-    $scope.choices = questionnaireChoices.query();
+
+
+
+    console.log(unorderedChoices);
 
     $scope.getAway = function() {
       window.open('http://weather.com', '_newtab');
