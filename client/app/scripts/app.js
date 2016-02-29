@@ -8,16 +8,16 @@
  *
  * Main module of the application.
  */
-angular
-  .module('jmlApiApp', [
+var app = angular.module('jmlApiApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -42,4 +42,11 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  });
+
+  app.run(function($rootScope) {
+    $rootScope.getAway = function() {
+      window.open('http://weather.com', '_newtab');
+      window.location.replace('http://google.com');
+    };
   });

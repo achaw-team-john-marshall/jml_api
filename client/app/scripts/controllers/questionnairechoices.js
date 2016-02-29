@@ -34,8 +34,4 @@ angular.module('jmlApiApp')
       window.location.replace('/#/question');
     };
 
-    angular.element(function () {
-      angular.element('[data-toggle="tooltip"]').tooltip();
-    });
-
   }]);
