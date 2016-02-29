@@ -8,16 +8,24 @@
  * Controller of the jmlApiApp
  */
 angular.module('jmlApiApp')
-  .controller('MainCtrl', ['$scope', function($scope) {
+  .controller('MainCtrl', ['$scope', 'tools', function($scope, tools) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    angular.element(function () {
-      angular.element('[data-toggle="tooltip"]').tooltip();
+    $scope.getAway = function() {
+      tools.quickClose();
+    };
+
+    angular.element(function() {
+      tools.toolTip();
     });
+
+    // angular.element(function () {
+    //   angular.element('[data-toggle="tooltip"]').tooltip();
+    // });
 
     window.$scope = $scope;
 
