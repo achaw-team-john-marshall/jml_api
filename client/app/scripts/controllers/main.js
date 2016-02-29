@@ -15,10 +15,6 @@ angular.module('jmlApiApp')
       'Karma'
     ];
 
-    angular.element(function () {
-      angular.element('[data-toggle="tooltip"]').tooltip();
-    });
-
     window.$scope = $scope;
 
   }]);

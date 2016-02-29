@@ -21,8 +21,4 @@ angular.module('jmlApiApp')
       $scope.questions[inputIndex].answerVisible = !$scope.questions[inputIndex].answerVisible;
     };
 
-    angular.element(function () {
-      angular.element('[data-toggle="tooltip"]').tooltip();
-    });
-
   }]);

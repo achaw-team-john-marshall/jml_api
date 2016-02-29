@@ -13,12 +13,6 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <script>
-      function getAway() {
-        window.open('http://weather.com', '_newtab');
-        window.location.replace('http://google.com');
-      }
-    </script>
   </head>
   <body ng-app="jmlApiApp">
     <!--[if lte IE 8]>
@@ -54,7 +48,7 @@
 
     <div class="container-fluid">
       <div class="ibox">
-      <a class="btn btn-block btn-xlarge btn-success" onclick="getAway()">
+      <a class="btn btn-block btn-xlarge btn-success" ng-click="getAway()">
           Quick Close
           <i data-toggle="tooltip" data-placement="right" title="Click here to quickly navigate away from this page" class="fa fa-question-circle"></i>
         </a>
@@ -104,5 +98,10 @@
         <script src="scripts/services/questionnairechoices.js"></script>
         <script src="scripts/controllers/questionnairechoices.js"></script>
         <!-- endbuild -->
+        <script>
+        angular.element(function() {
+          angular.element('[data-toggle="tooltip"]').tooltip();
+        });
+        </script>
 </body>
 </html>
