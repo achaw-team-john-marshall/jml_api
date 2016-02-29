@@ -15,10 +15,11 @@ angular.module('jmlApiApp')
       'Karma'
     ];
 
-    $scope.choices = [];
+    $scope.emptyChoices = [];
     var unorderedChoices = questionnaireChoices.query(function() {
       for (var i = 0; i < unorderedChoices.length; i++) {
-        $scope.choices[unorderedChoices[i].position - 1] = unorderedChoices[i];
+        $scope.emptyChoices[unorderedChoices[i].position - 1] = unorderedChoices[i];
+        $scope.choices = $scope.emptyChoices;
         console.log($scope.choices);
       }
     });
