@@ -1,5 +1,5 @@
 <h2>Frequently Asked Questions</h2>
-<div class="well" style="background-color:white;" ng-repeat="question in questions" ng-click="answerToggleVisible($index)">
-  <p>{{ question.body }}</p>
-  <p class="well" ng-if="question.answerVisible">{{ question.answer }}</p>
+<div class="ibox" ng-repeat="question in questions" ng-click="answerToggleVisible($index)">
+  <p class="faq-question">{{ question.body }}</p>
+  <p class="faq-answer" ng-if="question.answerVisible">{{ question.answer }}</p>
 </div>

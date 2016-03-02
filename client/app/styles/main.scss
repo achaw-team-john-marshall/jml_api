@@ -50,6 +50,21 @@ body {
       border-radius: 8px;
 }
 
+.faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1ab394;
+  display: block;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  background: #F3F3F4;
+  border: 1px solid #e7eaec;
+  border-radius: 3px;
+  padding: 15px;
+}
+
 .question-container::before {
   content: '';
   position: absolute;
