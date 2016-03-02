@@ -60,6 +60,32 @@ body {
   border-color: #7A0000;
 }
 
+.btn-yes {
+  color: #9A9A9A;
+  font-weight: 400;
+  background-color: #fff;
+  border-color: #9A9A9A;
+}
+
+.btn-yes:hover {
+  color: #fff;
+  background-color: #9A9A9A;
+  border-color: #9A9A9A;
+}
+
+.btn-no {
+  color: #9A0000;
+  font-weight: 400;
+  background-color: #fff;
+  border-color: #9A0000;
+}
+
+.btn-no:hover {
+  color: #fff;
+  background-color: #9A0000;
+  border-color: #9A0000;
+}
+
 .faq-question {
   font-size: 18px;
   font-weight: 500;
@@ -98,7 +124,7 @@ body {
 }
 
 .circ-bg {
-  color: #18A689;
+  color: #9A9A9A;
 }
 
 .num {
