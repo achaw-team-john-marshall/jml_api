@@ -42,12 +42,63 @@ body {
 }
 
 .btn-xlarge {
+  color: #fff;
+  background-color: #9A0000;
+  border-color: #9A0000;
   padding: 18px 28px;
   font-size: 22px;
   line-height: normal;
   -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
       border-radius: 8px;
+}
+
+.btn-xlarge:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #7A0000;
+  border-color: #7A0000;
+}
+
+.btn-yes {
+  color: #9A9A9A;
+  font-weight: 400;
+  background-color: #fff;
+  border-color: #9A9A9A;
+}
+
+.btn-yes:hover {
+  color: #fff;
+  background-color: #9A9A9A;
+  border-color: #9A9A9A;
+}
+
+.btn-no {
+  color: #9A0000;
+  font-weight: 400;
+  background-color: #fff;
+  border-color: #9A0000;
+}
+
+.btn-no:hover {
+  color: #fff;
+  background-color: #9A0000;
+  border-color: #9A0000;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1ab394;
+  display: block;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  background: #F3F3F4;
+  border: 1px solid #e7eaec;
+  border-radius: 3px;
+  padding: 15px;
 }
 
 .question-container::before {
@@ -73,7 +124,7 @@ body {
 }
 
 .circ-bg {
-  color: #18A689;
+  color: #9A9A9A;
 }
 
 .num {
@@ -116,7 +167,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
