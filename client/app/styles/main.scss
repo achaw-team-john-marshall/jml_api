@@ -17,6 +17,15 @@ body {
   background-color: #F3F3F4;
 }
 
+a {
+  font-weight: bold;
+  color: #990000;
+}
+
+a:hover {
+  color: #9a9a9a;
+}
+
 /* header */
 
 .top-nav {
@@ -29,6 +38,26 @@ body {
 }
 
 /* new layout */
+
+/* remove bootstrap default focus border */
+
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  outline: 0 !important;
+}
+
+.btn:active, .btn.active {
+  box-shadow: none !important;
+}
+
+/* tooltip */
+
+.white-tooltip + .tooltip > .tooltip-inner {
+  background-color: #fff;
+  color: #000;
+}
+
+.white-tooltip + .tooltip.right > .tooltip-arrow {
+  border-right-color: #fff;}
 
 .ibox {
   padding: 1em;
