@@ -19,11 +19,16 @@ body {
 
 a {
   font-weight: bold;
-  color: #990000;
+  color: #9A0000;
 }
 
 a:hover {
-  color: #9a9a9a;
+  color: #9A9A9A;
+}
+
+strong {
+  font-weight: bold;
+  color: #9A0000;
 }
 
 /* header */
@@ -127,9 +132,7 @@ a:hover {
 }
 
 .faq-question {
-  font-size: 18px;
-  font-weight: 500;
-  color: #1ab394;
+  color: #9A0000;
   display: block;
 }
 
