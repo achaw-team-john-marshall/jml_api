@@ -1,5 +1,5 @@
 <h2>Frequently Asked Questions</h2>
 <div class="ibox" ng-repeat="question in questions" ng-click="answerToggleVisible($index)">
-  <p class="faq-question">{{ question.body }}</p>
+  <h4 class="faq-question">{{ question.body }}</h4>
   <p class="faq-answer" ng-if="question.answerVisible">{{ question.answer }}</p>
 </div>

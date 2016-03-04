@@ -1,11 +1,19 @@
 Question.create!([
   {
-    body: "How can I contact the JML Domestic Violence Clinic?", 
-    answer: "Call us at 555-555-5555"
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat venenatis neque, eget egestas neque tincidunt nec?", 
+    answer: "Praesent et risus quis leo placerat sodales in et velit."
   },
   {
-    body: "Where are you located?",
-    answer: "315 S. Plymouth Court, Chicago, IL 60604"
+    body: "Nullam in tellus tincidunt, sagittis neque at, ornare ligula?", 
+    answer: "Vestibulum varius magna vitae risus consequat, id vehicula enim tincidunt."
+  },
+  {
+    body: "Vivamus ut tortor eget ante placerat posuere at sed ligula. Quisque ullamcorper posuere sollicitudin?", 
+    answer: "Sed eget ante vel ante rutrum viverra. Aliquam dolor nisl, rhoncus eget urna vel, porttitor sollicitudin nisl."
+  },
+  {
+    body: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla commodo quam vitae posuere vestibulum?",
+    answer: "Sed et imperdiet orci. Morbi feugiat urna et fermentum facilisis. Fusce fringilla feugiat ex, id condimentum sem volutpat hendrerit."
   }
 ])
 
