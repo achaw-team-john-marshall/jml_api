@@ -3,7 +3,8 @@
   <h2>Tax Relief Qualification</h2>
   <div class="well question">
     <div ng-repeat="choice in choices track by $index">
-      <div ng-if="choice.visible">{{ choice.body }}
+      <div ng-if="choice.visible">
+        <div ng-bind-html="choice.body"></div>
         <div class="quest-pic">
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x circ-bg"></i>
@@ -20,7 +21,8 @@
       </div>
     </div>
     <div ng-if="choices.length === 0">
-      <h4>You likely qualify for Innocent Spouse Relief.</h4>
+      <h4>Based on your answers to these questions, it appears that you qualify to apply for Innocent Spouse Relief.</h4>
+      <p>The IRS decision on whether to grant your relief from tax liability under the ''
       <p>See <a href="https://www.irs.gov/pub/irs-pdf/f8857.pdf" target="_blank">Form 8857</a>, Request for Innocent Spouse Relief.  Find instructions for this form<a href="https://www.irs.gov/pub/irs-pdf/i8857.pdf" target="_blank"> here</a>.</p>
       <p>Check back in the near future for an Interactive Form 8857 which the John Marshall Domestic Violence Clinic is currently working on. This interactive format will aid users in filling out the form.</p>
       <p>Also, please visit the following organizations who are dedicated to helping those who are victims of domestic violence:</p>
