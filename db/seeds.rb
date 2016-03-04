@@ -11,43 +11,23 @@ Question.create!([
 
 QuestionnaireChoice.create!([
   {
-    body: "Have you or your family members experienced domestic abuse on behalf of your spouse? Domestic abuse can range from physical abuse to emotional abuse. Domestic abuse also includes serious financial control, where you have no control over family finances and the filing of tax returns.",
+    body: "<strong><h4>Have you received a tax collection notice in the mail from the IRS?</h4></strong><p>A tax collection notice is a letter from the IRS that states your name, social security number, and the tax year at issue. The notice will also state the amount of tax due and any potential problems they found with your return.</p>",
     visible: true,
     position: 1
   },
   {
-    body: "Did you and your spouse file joint tax returns?",
+    body: "<strong><h4>Does this IRS notice relate to a joint tax return that you and your spouse filed together?</h4></strong>",
     visible: false,
     position: 2
   },
   {
-    body: "Do you owe the IRS tax due to erroneous items attributable to your spouse? You would likely be aware of this from the collection notices that the IRS periodically sends showing the amount of tax due. The tax would be attributable to your spouse if they incurred the tax, such as from their employment income, gambling earnings, retirement withdrawals, and business income.",
+    body: "<strong><h4>Please look at the IRS notice and your tax return to see why this tax amount may be due.  Does the IRS claim that you owe money to them because of any of the following:</h4></strong><ul><li>You and you spouse understated income in your tax return.  For example, you and your spouse earned money in that year and failed to report it on the tax return, <strong>or</strong></li><li>You and your spouse included items to deduct from your income that did not exist or exaggerated these amounts.  Common examples of deductions include interest paid on a mortgage, real estate taxes paid, or charitable donations, <strong>or</strong></li><li>The tax return is correct but you are not currently able to pay the tax due or feel it would be unfair for you to pay the tax rather than your spouse.  For example, your spouse does not contribute to pay family expenses or the tax that you owe is due to your spouse not withholding enough from their income.</li></ul>",
     visible: false,
     position: 3
   },
   {
-    body: "Has it been 2 years or less since the IRS first began collection activity on the tax?  In other words, did you start receiving notices from the IRS within the past two years?",
+    body: "<strong><h4>Is any of the following correct:</h4></strong><ul><li>You did not sign the tax return, <strong>or</strong></li><li>You did not read the tax return prior to signing it because you worried your spouse would harm you or someone you love if you asked him/her to read or explain it to you, <strong>or</strong></li><li>You did read the return and saw potential problems with the information, but were worried that your spouse would harm you or someone you loved if you asked him/her to read or explain it to you?</li></ul><p>In answering this question, please note that the IRS is aware and understands that if a person is a victim of domestic violence, they may be afraid to question the information on the return due to fear of retaliation.  <strong>Domestic violence has many forms and some examples include if your spouse did any of the following:</strong></p><ul><li>Physically harm or threaten you, your children, or other members of your family</li><li>Sexually abuse you, your children, or other members of your family</li><li>Make you afraid to disagree with him/her</li><li>Frequently criticizes or insults you in a cruel fashion that impacts your feelings of self-worth and confidence in your own worth and judgment</li><li>Withhold money for food, clothing, or other basic needs</li><li>Make most or all the decisions for you, including financial decisions</li><li>Restrict or control who you could see or talk to or where you could go</li><li>Isolate you or keep you from contacting your family members and/or friends</li><li>Cause you to fear for your safety in any other way</li><li>Stalk you, your children, or other members of your family</li><li>Become violent when your spouse abuses alcohol or drugs</li><li>Not allow you to have a bank account or have access to the household bank accounts, debit cards or credit cards</li><li>Have all of your income pay for family expenses while they use their income however they please</li><li>Allow you only to have an allowance from household income</li><li>Forge your name on documents</li></ul>",
     visible: false,
     position: 4
-  },
-  {
-    body: "Are you and your former spouse divorced, legally separated, or have you maintained separate households for at least one year? You and spouse would be considered members of the same household if you and your spouse live in the same dwelling, or you and your spouse live in different places but are not separated, or if your spouse is absent from the household but is likely to return (such as from prison, educational purposes, sick in the hospital, or is in the military).",
-    visible: false,
-    position: 5
-  },
-  {
-    body: "Have you and your former spouse engaged in any fraudulent schemes so as to defraud the IRS or any other person? One example would be transferring assets so as to avoid tax in which you would benefit from. Assets include real estate, bonds, or other property that you now possess.",
-    visible: false,
-    position: 6
-  },
-  {
-    body: "For the tax years in question, did you or your spouse incur any large expenses,such as vacations, home improvements, private schooling or did you and your spouse make any large purchases, such as automobiles, appliances, or jewelry?",
-    visible: false,
-    position: 7
-  },
-  {
-    body: "Will you suffer financial hardship if you are required to pay the tax? For example,if you have to pay the tax, will you have trouble paying basic living expenses like food, shelter, and clothing?",
-    visible: false,
-    position: 8
   }
 ])
