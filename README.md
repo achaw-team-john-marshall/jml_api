@@ -32,21 +32,18 @@ Notable points of deviation from this article include
 
 ## So what's going on here?
 
-### 2 Things
-
-  ##### Development environment
-When working on the application locally, use grunt to serve the pages into your web-browser with this command run from inside `client/`
+  #### Development environment
+When working on the application locally, use grunt to serve the pages into your web-browser with grunts server. Be sure to **run all grunt, bower, npm etc. commands inside `client/`**
 
 `grunt serve --force`
-
-Be sure to **run all grunt, bower, npm etc. commands inside `client/`**
 
   *The `--force` option is required because of how we have configured the grunt proxy server. If [this](https://coderwall.com/p/i1bg2q/creating-a-force-task-in-grunt) annoys you.*
 
 The rails server is then run to pass data into the grunt server via grunt_connect_proxy.
 
-`rails s`
+`rails serve`
 
+##### Diagram:
 ```
 rails<--[:3000/api]-->grunt_connect_proxy<--[:9000/api]-->grunt_serve
                                                                    /\
@@ -60,4 +57,13 @@ rails<--[:3000/api]-->grunt_connect_proxy<--[:9000/api]-->grunt_serve
                                                                 web_browser
 ```
 
-Grunt_connect_proxy is configured in client/gruntfile.js. It is currently configured so that any request beginning  `/api` will be passed
+Grunt_connect_proxy is configured in client/gruntfile.js. It is currently configured so that any request beginning  `/api` will be passed by grunt_connect_proxy through to rails.
+
+#### Production environment
+
+In production all requests are handled by rails. All of the static assest that were being served by grunt in development are now in the `public/` directory. A look at `config/routes.rb` will show that only `/api` routes are mapped to any controller methods while everything else is just served from `public/`. Grunt is configured so that running
+```
+grunt build --force
+```
+will compile all of the relevant html, css, and js files from `client/app/` into `public/`. This means that any changes inside of the `client/` folder will not
+reflected in the deployed application unless `grunt build --force` is run and the changes are committed to git. This can be verified before pushing to heroku by attempting to browse the site locally using only the rails server.
