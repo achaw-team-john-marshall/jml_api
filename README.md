@@ -41,7 +41,7 @@ When working on the application locally, use grunt to serve the pages into your 
 
 The rails server is then run to pass data into the grunt server via grunt_connect_proxy.
 
-`rails serve`
+`rails server`
 
 ##### Diagram:
 ```
