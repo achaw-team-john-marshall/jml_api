@@ -24,10 +24,40 @@ This application was built as two conceptually seperate components
 - A [rails-api](https://github.com/rails-api/rails-api) backend
 - A [yeoman-angular](https://github.com/yeoman/generator-angular) based frontend
 
-This application is based heavily off the tutorial [How to Wire up Ruby on Rails and AngularJS as a Single-Page Application](http://www.angularonrails.com/ruby-on-rails-angularjs-single-page-application/). From here on it will be assumed that you have read and fully understood this article. 
+This application is based heavily off the tutorial [How to Wire up Ruby on Rails and AngularJS as a Single-Page Application](http://www.angularonrails.com/ruby-on-rails-angularjs-single-page-application/). From here on it will be assumed that you have read and fully understood this article.
 
 Notable points of deviation from this article include
 - `yo angular:factory <some_factory>` to generate the our resource factories
 - Exclude puma from development environment or gurnt-proxy pass will not work
 
-*guys lets fill in all the gotchas here*
+## So what's going on here?
+
+### 2 Things
+
+  ##### Development environment
+When working on the application locally, use grunt to serve the pages into your web-browser with this command run from inside `client/`
+
+`grunt serve --force`
+
+Be sure to **run all grunt, bower, npm etc. commands inside `client/`**
+
+  *The `--force` option is required because of how we have configured the grunt proxy server. If [this](https://coderwall.com/p/i1bg2q/creating-a-force-task-in-grunt) annoys you.*
+
+The rails server is then run to pass data into the grunt server via grunt_connect_proxy.
+
+`rails s`
+
+```
+rails<--[:3000/api]-->grunt_connect_proxy<--[:9000/api]-->grunt_serve
+                                                                   /\
+      _                _                                  _        |    
+   __| | _____   _____| | ___  _ __  _ __ ___   ___ _ __ | |_      |
+  / _` |/ _ \ \ / / _ \ |/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __|     |
+ | (_| |  __/\ V /  __/ | (_) | |_) | | | | | |  __/ | | | |_   [:9000/*]
+  \__,_|\___| \_/ \___|_|\___/| .__/|_| |_| |_|\___|_| |_|\__|     |
+                              |_|                                  |
+                                                                   \/
+                                                                web_browser
+```
+
+Grunt_connect_proxy is configured in client/gruntfile.js. It is currently configured so that any request beginning  `/api` will be passed
