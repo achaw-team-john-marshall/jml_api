@@ -72,7 +72,7 @@ strong {
   border-top: 3px solid #d7e4ed;
 }
 
-.ibox h3 {
+.mission h3 {
   padding-bottom: .5em;
   padding-left: 10px;
   padding-right: 10px;
@@ -84,6 +84,14 @@ strong {
   padding: 10px;
   margin-bottom: 0px;
   text-align: justify;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h4 {
+  font-size: 24px;
 }
 
 .btn-xlarge {
@@ -99,6 +107,23 @@ strong {
 }
 
 .btn-xlarge:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #7A0000;
+  border-color: #7A0000;
+}
+
+.btn-mini {
+  color: #fff;
+  background-color: #9A0000;
+  border-color: #9A0000;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+      border-radius: 8px;
+}
+
+.btn-mini:hover {
   color: #fff;
   text-decoration: none;
   background-color: #7A0000;
