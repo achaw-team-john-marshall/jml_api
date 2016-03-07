@@ -1,4 +1,7 @@
-<h2>Frequently Asked Questions</h2>
+<div class="ibox title">
+  <h2>Frequently Asked Questions</h2>
+  <p>Based on the answers you've provided, it does not appear you qualify for tax relief.  Here are some frequently asked questions and responses that may provide further guidance regarding next steps.</p>
+</div>
 <div class="ibox" ng-repeat="question in questions" ng-click="answerToggleVisible($index)">
   <h4 class="faq-question">{{ question.body }}</h4>
   <p class="faq-answer" ng-if="question.answerVisible">{{ question.answer }}</p>
